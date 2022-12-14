@@ -1,0 +1,2 @@
+a,b,c = input().split()
+print(f"{a}{3*b}{2*c}")
