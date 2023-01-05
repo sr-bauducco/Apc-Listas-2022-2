@@ -1,12 +1,11 @@
-def maiorSalario(lista_num):
+def menorSalario(lista_num):
     num= [float(i) for i in lista_num]
-    sorted(num)
-    num = sorted(num,key=float)
-    tamanho = len(lista_num)
-    if tamanho == 0:
-        return "Não tem"
-    else: 
-        return f"{num[tamanho-1]:.2f}"
+    if len(num)>0:
+        menor = min(num)
+    #   num.index(menor)
+        return num.index(menor)+1
+    else:
+        return 0
 
 
 parada = False
@@ -21,4 +20,10 @@ while parada == False:
         lista_nome.append(entrada[0])
         lista_num.append(entrada[1])
         parada = False
-print(maiorSalario(lista_num))      
+        
+if menorSalario(lista_num)>=1:
+    print(lista_nome[menorSalario(lista_num)-1])
+else:
+    print ("Não tem")
+
+    
