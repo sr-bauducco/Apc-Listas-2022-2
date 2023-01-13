@@ -1,11 +1,7 @@
-entry = input()
-cont=1
-lista=[]
-while cont< len(entry):
-    if  cont < len(entry):
-        lista.append(entry[cont])
-        cont+=2
-        
-lista = str(lista.replace(" ",""))
-print(f"{''.join(str(i) for i in lista)}")
+s = input()
 
+for c in range(len(s)):
+    if c%2 >0:
+        print(s[c].replace(" ",""),end="",sep="")
+    else:
+        pass
